@@ -118,6 +118,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\MovieController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="DataAccess\Managers\GenreManager.cs" />
     <Compile Include="DataAccess\Managers\MovieManager.cs" />
     <Compile Include="DataAccess\Model\Genre.cs">
@@ -149,6 +150,7 @@
     <Compile Include="ViewModels\Movie\AddMovieVM.cs" />
     <Compile Include="ViewModels\Movie\EditMovieVM.cs" />
     <Compile Include="ViewModels\Movie\MovieIndexVM.cs" />
+    <Compile Include="ViewModels\Login\LoginVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\Movies.mdf" />
@@ -209,6 +211,7 @@
     <Content Include="Views\Movie\Add.cshtml" />
     <Content Include="Views\Movie\Edit.cshtml" />
     <Content Include="Views\Movie\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

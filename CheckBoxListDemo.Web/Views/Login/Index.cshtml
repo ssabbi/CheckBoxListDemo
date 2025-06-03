@@ -1,0 +1,35 @@
+@model CheckBoxListDemo.Web.ViewModels.Login.LoginVM
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div>
+        <div>
+            @Html.LabelFor(m => m.Username)
+            @Html.TextBoxFor(m => m.Username)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.Password)
+            @Html.PasswordFor(m => m.Password)
+        </div>
+        <div>
+            <input type="submit" value="Log in" />
+        </div>
+    </div>
+}
+
+@if (ViewData.ModelState.Count > 0 && !ViewData.ModelState.IsValid)
+{
+    <p style="color:red">@ViewData.ModelState[string.Empty]?.Errors.FirstOrDefault()?.ErrorMessage</p>
+}
+
+@if (TempData["LoginMessage"] != null)
+{
+    <p style="color:green">@TempData["LoginMessage"]</p>
+}
